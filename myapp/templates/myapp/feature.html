@@ -1,0 +1,16 @@
+  {% extends 'myapp/base.html'%}
+  {% block title %} Feature EVengers {% endblock title %}
+  {% block menubar%}
+        <a class="nav-link fw-bold py-1 px-0 " aria-current="page" href="{% url 'home'%}">Home</a>
+        <a class="nav-link fw-bold py-1 px-0 active" href="{% url 'feature'%}">Features</a>
+        <a class="nav-link fw-bold py-1 px-0 " href="{% url 'contact'%}">Contact</a>
+  {% endblock menubar%}
+
+  {% block content%}
+    <h1>Feature</h1>   
+    <p class="lead">แค่หาพื้นที่เหมาะสมก็สามารถติดตั้งแท่นชาร์จรถ EV ได้แล้ว</p>
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+    </p>
+  {% endblock content%}
+  
