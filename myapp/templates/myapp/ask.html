@@ -1,0 +1,40 @@
+{% extends 'myapp/base.html'%}
+  {% block title %} สอบถามปัญาหา {% endblock title %}
+  
+
+  {% block content%}
+    {%comment%} ชื่อผู้ติดต่อ (text) {%endcomment%}
+    {%comment%} email {%endcomment%}
+    {%comment%} หัวข้อ {%endcomment%}
+    {%comment%} รายละเอียด (textarae) {%endcomment%}
+
+    <h2>สอบถามปัญาได้เลย</h2><br>
+
+    <div class="container">
+      <form method="POST">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="name">ชื่อผู้ติดต่อ</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div><br>
+        <div class="form-group">
+          <label for="email">email</label>
+          <input type="text" class="form-control" id="email" name="email">
+      </div><br>
+      <div class="form-group">
+        <label for="title">หัวข้อ</label>
+        <input type="text" class="form-control" id="title" name="title">
+      </div><br>
+      <div class="form-group">
+        <label for="detail">รายละเอียด</label>
+        <textarea class="form-control" rows="5" id="detail" name="detail"></textarea>
+      </div><br>
+      <button type="submit" class="btn btn-primary">Click Me</button>
+
+      </form>
+    </div>
+
+   
+
+  {% endblock content%}

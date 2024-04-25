@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>{% block title %}Web EVengers {% endblock title %}</title>
+    
+    <title>{% block title %} Web EVengers {% endblock title %}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
 
@@ -136,9 +137,11 @@
       <nav class="nav nav-masthead justify-content-center float-md-end">
         {% block menubar%}
         <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="{% url 'home'%}">Home</a>
+        <a class="nav-link fw-bold py-1 px-0" href="#">บทความ</a>
         <a class="nav-link fw-bold py-1 px-0" href="{% url 'tracking'%}">Check Tracking</a>
         <a class="nav-link fw-bold py-1 px-0" href="{% url 'feature'%}">Features</a>
         <a class="nav-link fw-bold py-1 px-0" href="{% url 'contact'%}">Contact</a>
+        <a class="nav-link fw-bold py-1 px-0" href="{% url 'ask'%}">Q&A</a>
         
         {% endblock menubar%}
       </nav>

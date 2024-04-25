@@ -2,7 +2,14 @@
 
 {% block content%}
 {% for t in tracks %}
-    <h1>{{t}}</h1><br>
+    {% if t.tracking %}
+        <h1>{{t.name}}</h1><br>
+        <h2>{{t.tracking}}</h2>
+    {% else %}
+        <h1>{{t.name}}</h1>
+        <h2>ยังไม่เริ่มจัดส่ง</h2>
+    {% endif %}
+    -----------------------
 {% endfor %}
 
 {% endblock content%}
